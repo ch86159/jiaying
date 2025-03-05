@@ -54,7 +54,13 @@
         </div>
 
         <!-- 图片 -->
-        <img src="static/banner5.png" alt="">
+        <img src="static/banner5.png" class="dial-trigger" data-phone="15626486691">
+        <!-- HTML 使用示例 -->
+<!--         <button class="dial-trigger" data-phone="400-123-4567">点击咨询</button>
+        <img src="image1.jpg" class="dial-trigger" data-phone="400-111-2222" alt="客服1">
+        <div class="dial-trigger" data-phone="400-333-4444">在线客服</div>
+ -->
+
 
         <!-- 问答容器 -->
         <div class="qa-card">
@@ -109,46 +115,15 @@
             </div>
             <div onclick="downLoad()" id="downBtn" class="downLoadBtnOnTop">
 
-                <a href="tel:15626486691">官方开通热线：15626486691</a>
+                <a class="dial-trigger" data-phone="15626486691">官方开通热线：15626486691</a>
             </div>
         </div>
     </div>
 
-    <script type="text/javascript">
-        window.addEventListener('scroll', handleScroll, true)
-        function handleScroll() {
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-            var whiteBox1 = document.getElementById("contentBox")
-            var downLoadBtn1 = document.getElementById("downBtn")
-            var innerContet = document.getElementsByClassName("innerContet")[0]
-            var versionCont = document.getElementsByClassName("versionCont")[0]
-            // var whiteBox = document.getElementsByClassName("whiteBox")
-            if (scrollTop <= 40) {
-                whiteBox1.setAttribute('class', 'whiteBox')
-                downLoadBtn1.setAttribute('class', 'downLoadBtn')
-                innerContet.setAttribute('class', 'innerContet')
-                versionCont.setAttribute('class', 'versionCont')
-            } else {
-                whiteBox1.setAttribute('class', 'onTop')
-                downLoadBtn1.setAttribute('class', 'downLoadBtnOnTop')
-                innerContet.classList.add('hide')
-                versionCont.classList.add('hide')
-            }
-        }
-
-
-        function downLoad() {
-            let u = navigator.userAgent;
-            // let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;   //判断是否是 android终端
-            let isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);     //判断是否是 iOS终端
-            if (isIOS) {
-                document.location.href = 'https://chenbollll.gitee.io/text_pages/'
-            } else {
-                document.location.href = 'https://chenbollll.gitee.io/text_pages/'
-            }
-        }
-    </script>
+    <!-- 引入JS -->
+    <script src="dial.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/gd.js"></script>
 
     <app-frame-80471 id="redeviation-bs-sidebar" class="notranslate redeviation-bs-hideMask" aria-hidden="true"
         data-theme="glass" data-pos="right"></app-frame-80471>
