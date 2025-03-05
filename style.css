@@ -1,0 +1,347 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #f1f1f1;
+}
+
+#app {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    /*font-size: 0;*/
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 2px 3px 10px #999;
+}
+
+.topNav {
+    width: 100%;
+    position: relative;
+}
+
+.banner {
+    position: absolute;
+}
+
+.sakula {
+    position: absolute;
+    z-index: 999;
+}
+
+.bannerImg {
+    position: relative;
+}
+
+.contentDiv {
+    position: absolute;
+    left: 13%;
+    bottom: 10%;
+    display: flex;
+    width: 67%;
+    transform: scale(0.8);
+}
+
+.orangeDiv {
+    background-color: #ffa800;
+    color: #b71e01;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 2px;
+    padding: 1px 4px;
+    margin-left: 10px;
+}
+
+.loadBtn {
+    width: 25%;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+img {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.downLoadBtnBox {
+    position: fixed;
+    bottom: 0;
+    /*padding: 0 5%;*/
+    margin-bottom: 5vh;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    text-align: center;
+}
+
+.downLoadBtn {
+    width: 82%;
+    font-size: 16px;
+    padding: 8px 0;
+    margin: 0 9%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #ffa800;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 25px;
+    box-shadow: #ab7308 1px 2px 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    position: absolute;
+    /*top: -105px;*/
+    bottom: 4rem;
+}
+
+.arrowDown {
+    width: 25px;
+    margin-right: 8px;
+}
+
+.name {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+    transition: all 0.4s;
+}
+
+.onTop {
+    height: 0 !important;
+    padding: unset !important;
+    border: unset !important;
+    transition: all 0.4s;
+    /*display: none;*/
+}
+
+.downLoadBtnOnTop {
+    bottom: 15px;
+    padding: 8px 0;
+    margin: 0 2%;
+    width: 95%;
+    font-size: 18px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #ffa800;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 25px;
+    box-shadow: #ab7308 1px 2px 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    position: absolute;
+}
+
+.whiteBox {
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    transition: all 0.4s;
+    border-radius: 25px;
+    border: 1px solid #c7c7c7;
+    padding: 10px 5%;
+    margin: 0 5%;
+    line-height: 25px;
+    height: 265px;
+}
+
+.innerContet {
+    position: relative;
+    top: -45px;
+}
+
+.versionCont {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    box-sizing: border-box;
+    line-height: 20px;
+    color: #939393;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 23%;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.info {
+    color: #777777;
+    font-size: 14px;
+}
+
+a {
+    color: #fff;
+    text-decoration: unset;
+    display: block;
+}
+
+
+
+/* 公共轮播样式 */
+.carousel {
+    --carousel-height: 300px;
+    /* 使用CSS变量 */
+    width: 100%;
+    height: var(--carousel-height);
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+    /* 轮播间距 */
+}
+
+/* 轨道通用样式 */
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* 轮播项通用样式 */
+.carousel-item {
+    min-width: 100%;
+    height: var(--carousel-height);
+    background-size: cover;
+    background-position: center;
+}
+
+/* 指示器通用样式 */
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.carousel-indicators .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carousel-indicators .indicator.active {
+    background: #fff;
+}
+
+/* 自定义不同轮播尺寸 */
+#carousel1 {
+    --carousel-height: 600px;
+    /* 覆盖变量 */
+}
+
+#carousel2 {
+    --carousel-height: 600px;
+    /* 覆盖变量 */
+}
+
+/* 问答容器 */
+.qa-card {
+    background: #fff;
+/*     border-radius: 8px; */
+    padding: 20px;
+/*     margin-bottom: 15px; */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 标题容器 */
+.title-wrapper {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+/* 问字标识 */
+.q-mark {
+    background: #e54d42;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+/* 标题正文 */
+.qa-title {
+    color: #333;
+    font-size: 17px;
+    line-height: 1.4;
+    margin: 0;
+    flex: 1;
+}
+
+/* 正文内容 */
+.qa-content {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    padding-left: 34px;
+    /* 对齐标题文字 */
+}
+
+/* 移动端适配 */
+@media (max-width: 375px) {
+    .qa-card {
+        padding: 16px;
+    }
+
+    .q-mark {
+        width: 22px;
+        height: 22px;
+        font-size: 14px;
+    }
+
+    .qa-title {
+        font-size: 16px;
+    }
+
+    .qa-content {
+        font-size: 14px;
+        padding-left: 32px;
+    }
+}
