@@ -1,0 +1,43 @@
+.star-rating {
+    --star-size: 20px;         /* 图标大小 */
+    --active-color: #ffd700;    /* 激活颜色 */
+    --inactive-color: #ccc;     /* 默认颜色 */
+    position: relative;
+    display: inline-flex;
+    font-size: 0;              /* 消除间距 */
+}
+
+/* 基础星星样式 */
+.star {
+    width: var(--star-size);
+    height: var(--star-size);
+    display: block;
+    position: relative;
+}
+
+/* 使用伪元素创建星星 */
+.star::before {
+    content: '\2605';          /* Unicode五角星 */
+    position: absolute;
+    font-size: var(--star-size);
+    color: var(--inactive-color);
+    left: 0;
+    top: 0;
+}
+
+/* 激活状态 */
+.star.active::before {
+    color: var(--active-color);
+}
+
+/* 半星效果 */
+.star.half::after {
+    content: '\2605';
+    position: absolute;
+    font-size: var(--star-size);
+    color: var(--active-color);
+    width: 50%;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+}
